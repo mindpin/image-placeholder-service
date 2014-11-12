@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Url:
+  = @image.url
+%p
+  %b Width:
+  = @image.width
+%p
+  %b Height:
+  = @image.height
+%p
+  %b Ratio:
+  = @image.ratio
+
+= link_to 'Edit', edit_image_path(@image)
+\|
+= link_to 'Back', images_path

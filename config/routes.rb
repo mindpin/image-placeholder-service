@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :images
+
   root 'home#index'
 
   get '/login' => 'home#login', as: :login

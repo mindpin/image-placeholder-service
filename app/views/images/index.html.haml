@@ -1,0 +1,25 @@
+%h1 Listing images
+
+%table
+  %tr
+    %th Url
+    %th Width
+    %th Height
+    %th Ratio
+    %th
+    %th
+
+  - @images.each do |image|
+    %tr
+      %td
+        = link_to image.url, target: '_blank' do
+          = image_tag image.url + '@200w_200h_1e_1c.jpg'
+      %td= image.width
+      %td= image.height
+      %td= image.ratio
+      %td= link_to 'Show', image
+      %td= link_to 'Destroy', image, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Image', new_image_path
