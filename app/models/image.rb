@@ -12,4 +12,9 @@ class Image
     self.ratio = self.width.to_f / self.height.to_f
     self.ratio = (self.ratio * 100).round / 100.0
   end
+
+  def self.random
+    offset = rand(self.count)
+    rand_record = self.offset(offset).first
+  end
 end

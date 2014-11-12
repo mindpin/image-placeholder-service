@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  require 'open-uri'
   before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   # GET /images
@@ -64,6 +65,15 @@ class ImagesController < ApplicationController
       format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def fill_image
+    @image = Image.random
+    @width = params[:width].to_i
+    @height = params[:height].to_i
+    @url = "#{@image.url}@#{@width}w_#{@height}h_1e_1c.png"
+
+    send_file open(@url), type: 'image/png', disposition: 'inline'
   end
 
   private
