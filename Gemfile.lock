@@ -1,13 +1,23 @@
 GIT
-  remote: https://github.com/mindpin/image-4ye.git
+  remote: git://github.com/fushang318/mina.git
+  revision: 93f5ca5d1c9588a59859704302543710af7b37d0
+  tag: v0.2.0fix
+  specs:
+    mina (0.2.0)
+      open4
+      rake
+
+GIT
+  remote: git://github.com/mindpin/image-4ye.git
   revision: f609e6f3c9cf2656aef63facf3cc5650b8e669c3
+  tag: 0.0.2
   specs:
     image-4ye (0.0.1)
       mini_magick
       rest-client (~> 1.7.2)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.1.2)
       actionpack (= 4.1.2)
@@ -88,6 +98,7 @@ GEM
       optionable (~> 0.2.0)
     multi_json (1.10.1)
     netrc (0.8.0)
+    open4 (1.3.4)
     optionable (0.2.0)
     origin (2.1.1)
     polyglot (0.3.5)
@@ -160,6 +171,7 @@ DEPENDENCIES
   image-4ye!
   jbuilder (~> 2.0)
   jquery-rails
+  mina!
   mongoid (= 4.0.0)
   rails (= 4.1.2)
   sass-rails (~> 4.0.3)

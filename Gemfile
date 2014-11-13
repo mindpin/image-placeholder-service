@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -25,5 +25,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem "mongoid", "4.0.0"
 gem "haml-rails"
-gem 'image-4ye', git: 'https://github.com/mindpin/image-4ye.git'
 gem 'byebug',        group: :development
+gem 'image-4ye', 
+  github: 'mindpin/image-4ye',
+  tag: "0.0.2"
+
+gem "mina",
+    github: "fushang318/mina",
+    tag: "v0.2.0fix"
