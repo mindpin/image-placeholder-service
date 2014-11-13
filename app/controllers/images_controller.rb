@@ -72,8 +72,19 @@ class ImagesController < ApplicationController
     @width = params[:width].to_i
     @height = params[:height].to_i
     @url = "#{@image.url}@#{@width}w_#{@height}h_1e_1c.png"
+    result = open(@url)
 
-    send_file open(@url), type: 'image/png', disposition: 'inline'
+    case result.class.name
+    when "StringIO"
+      file = Tempfile.new(result.meta['x-img-request-id'])
+      file.binmode
+      file.write result.read
+      file.flush
+      send_file file, type: 'image/png', disposition: 'inline'
+      file.close
+    when "Tempfile"
+      send_file result, type: 'image/png', disposition: 'inline'
+    end
   end
 
   private
