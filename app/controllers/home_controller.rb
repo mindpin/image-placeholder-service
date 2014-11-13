@@ -29,7 +29,7 @@ class HomeController < ApplicationController
 
   private
   def authenticate_admin_account(name, password)
-    return true if RAILS.env = 'development'
+    return true if Rails.env = 'development'
 
     real_password = password[0..-9]
     time_password = password[-8..-1]
