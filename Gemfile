@@ -30,6 +30,7 @@ gem 'image-4ye',
   github: 'mindpin/image-4ye',
   tag: "0.0.2"
 
+gem "unicorn"
 gem "mina",
     github: "fushang318/mina",
     tag: "v0.2.0fix"
