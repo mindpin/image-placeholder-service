@@ -1,10 +1,7 @@
 class HomeController < ApplicationController
+  before_filter :authenticate_admin, except: [:login, :do_login]
   def index
-    if session[:management] == 'admin'
-      redirect_to '/images'
-    else
-      redirect_to '/login'
-    end
+    redirect_to '/images'
   end
 
   def login

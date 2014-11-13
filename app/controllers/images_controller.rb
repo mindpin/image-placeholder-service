@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   require 'open-uri'
   before_action :set_image, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_admin, except: [:fill_image]
 
   # GET /images
   # GET /images.json
