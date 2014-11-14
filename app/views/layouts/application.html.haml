@@ -14,3 +14,5 @@
 
   %body
     = yield
+    - if action_name != 'login'
+      %p= link_to '登出', logout_path
