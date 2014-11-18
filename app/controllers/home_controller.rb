@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
-  before_filter :authenticate_admin, except: [:login, :do_login]
+  before_filter :authenticate_admin, except: [:login, :do_login, :index]
   def index
+
+  end
+
+  def zhi_ma_kai_men
     redirect_to '/images'
   end
 

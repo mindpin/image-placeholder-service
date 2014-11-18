@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get '/zhi_ma_kai_men' => 'home#zhi_ma_kai_men', as: :zhi_ma_kai_men
   get '/login' => 'home#login', as: :login
   post '/login' => 'home#do_login'
   get '/logout' => 'home#logout', as: :logout

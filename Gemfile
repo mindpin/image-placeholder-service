@@ -34,3 +34,5 @@ gem "unicorn"
 gem "mina",
     github: "fushang318/mina",
     tag: "v0.2.0fix"
+
+gem 'bootstrap-sass', '~> 3.3.1'
